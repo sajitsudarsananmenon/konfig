@@ -1,0 +1,8 @@
+com\konfig\rs\PingResource.class
+com\konfig\beans\ConfigResponse.class
+com\konfig\beans\ConfigInfo.class
+com\konfig\beans\Ping.class
+com\konfig\service\ConfigService.class
+com\konfig\util\AppConfig.class
+com\konfig\service\FileService.class
+com\konfig\rs\ConfigResource.class

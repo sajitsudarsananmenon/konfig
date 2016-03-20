@@ -1,0 +1,6 @@
+com\konfig\rs\PingResourceTest.class
+com\konfig\service\FileServiceTest.class
+com\konfig\util\AppConfigTest.class
+com\konfig\service\ConfigServiceTest.class
+com\konfig\rs\Main.class
+com\konfig\rs\ConfigResourceTest.class
