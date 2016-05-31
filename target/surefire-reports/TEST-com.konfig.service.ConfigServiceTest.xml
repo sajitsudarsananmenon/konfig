@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\work\Sajit\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3350309923590280472.tmp"/>
+    <property name="classworlds.conf" value="C:\work\Sajit\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3363004032631722910.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_55\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_60/bin/server;C:/Program Files/Java/jre1.8.0_60/bin;C:/Program Files/Java/jre1.8.0_60/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\CREDANT\Shield v7.1\;C:\Program Files\SourceGear\Common\DiffMerge\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Symantec\VIP Access Client\;C:\work\Sajit\tools\apache-maven-3.3.3-bin\bin;C:\work\Sajit\tools\jaxb-ri-2.2.11\jaxb-ri\bin;C:\work\Sajit\tools\eclipse-jee-luna-SR2-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\bin;C:\work\Sajit\tools\gradle-2.7-bin\gradle-2.7\bin;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files (x86)\MySQL\MySQL Utilities\;C:\Program Files (x86)\MySQL\MySQL Utilities\Doctrine extensions for PHP\;C:\Users\ssudar0\AppData\Roaming\npm;C:\Windows\system32;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>

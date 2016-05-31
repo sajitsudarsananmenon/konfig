@@ -7,20 +7,23 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.konfig.beans.Ping;
+import com.konfig.service.FileService;
 
 /**
  * @author Sajit Sudarsanan
- * This resource class provides a ping service for the application health check
+ * 
+ *         This resource class provides a ping service for the application
+ *         health check
  *
  */
 @Path("/ping")
-public class PingResource {
+public class PingResource{
 
-    @GET 
-    @Produces(MediaType.APPLICATION_JSON)
-    public Ping getIt() {
-    	Ping ping=new Ping();
-    	ping.setStatus("ok");
-        return ping;
-    }
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Ping getIt() {
+		Ping ping = new Ping();
+		ping.setStatus("ok");
+		return ping;
+	}
 }

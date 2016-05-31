@@ -10,7 +10,7 @@ public class ConfigServiceTest {
 	public void testServiceNotNull() {
 		assertNotNull(ConfigService.service(".properties"));
 	}
-	
+
 	@Test
 	public void testServiceIsNull() {
 		assertNull(ConfigService.service(".xml"));
@@ -18,9 +18,8 @@ public class ConfigServiceTest {
 
 	@Test
 	public void testConfigResponseIsNull() {
-		ConfigService service=ConfigService.service(".properties");
+		ConfigService service = ConfigService.service(".properties");
 		assertNull(service.build(null, "konfig", "PROD"));
 	}
-
 
 }

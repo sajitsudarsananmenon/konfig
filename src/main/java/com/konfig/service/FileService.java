@@ -10,8 +10,19 @@ import com.konfig.beans.ConfigInfo;
 import com.konfig.beans.ConfigResponse;
 import com.konfig.util.AppConfig;
 
+/**
+ * @author Sajit Sudarsanan
+ * 
+ *         File service handlers class reads the .properties files from
+ *         specified application configuration path
+ *
+ */
 public class FileService extends ConfigService {
-
+	
+	/**
+	 * This method looks through the multiple config properties files of the
+	 * application to get the value of the requested config parameter
+	 */
 	public ConfigResponse get(String configParam, String path, String appName, String env) {
 		ArrayList<ConfigInfo> cInfoList = null;
 		String configValue = "";
@@ -41,9 +52,13 @@ public class FileService extends ConfigService {
 		return build(cInfoList, appName, env);
 	}
 
+	/**
+	 * This methods returns all the config values present in multiple properties
+	 * files present for the application
+	 */
 	public ConfigResponse getAll(String path, String appName, String env) {
 		ArrayList<ConfigInfo> cInfoList = new ArrayList<ConfigInfo>();
-		ConfigInfo cInfo=null;
+		ConfigInfo cInfo = null;
 		String source = "";
 		String[] actualPath = getPath(path, appName);
 		if (null != actualPath && actualPath.length > 0) {
@@ -52,7 +67,7 @@ public class FileService extends ConfigService {
 					final Properties props = new Properties();
 					props.load(new FileInputStream(actualPath[i]));
 					source = actualPath[i];
-					cInfo=buildConfigInfoAll(props);
+					cInfo = buildConfigInfoAll(props);
 					cInfo.setSource(source);
 					cInfoList.add(cInfo);
 				} catch (Exception e) {
@@ -65,6 +80,17 @@ public class FileService extends ConfigService {
 		return build(cInfoList, appName, env);
 	}
 
+	/**
+	 * This methods returns the fully qualified config path for the application
+	 * using the path parameter from the request header and the konfig
+	 * applications configuration. If path is not present in request header or
+	 * value is "default", this method will return the path of the application
+	 * config from the konfig configuration
+	 * 
+	 * @param path
+	 * @param appName
+	 * @return
+	 */
 	public String[] getPath(String path, String appName) {
 		String actualPath = "";
 		String files = "";
@@ -89,7 +115,16 @@ public class FileService extends ConfigService {
 		return fileLocation;
 	}
 
-	public ConfigInfo buildConfigInfo(String key, String value, String source) {
+	/**
+	 * Builds the ConfigInfo bean for the requested config parameter based on
+	 * the given inputs
+	 * 
+	 * @param key
+	 * @param value
+	 * @param source
+	 * @return
+	 */
+	private ConfigInfo buildConfigInfo(String key, String value, String source) {
 		ConfigInfo cInfo = new ConfigInfo();
 		HashMap<String, String> keyVal = new HashMap<String, String>();
 		cInfo.setSource(source);
@@ -98,10 +133,17 @@ public class FileService extends ConfigService {
 		return cInfo;
 	}
 
-	public ConfigInfo buildConfigInfoAll(Properties props) {
+	/**
+	 * Builds the ConfigInfo bean for the all config parameters available for
+	 * given application
+	 * 
+	 * @param props
+	 * @return
+	 */
+	private ConfigInfo buildConfigInfoAll(Properties props) {
 		ConfigInfo cInfo = new ConfigInfo();
 		HashMap<String, String> keyVal = new HashMap<String, String>();
-		String configValue="";
+		String configValue = "";
 		Set<String> keyset = props.stringPropertyNames();
 		for (String configParam : keyset) {
 			configValue = props.getProperty(configParam);

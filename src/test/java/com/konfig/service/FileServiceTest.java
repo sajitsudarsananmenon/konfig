@@ -24,19 +24,19 @@ public class FileServiceTest {
 	// test cases for get
 	@Test
 	public void whenInputConfigParamIsFoundInFileThenReturnValue() {
-		ConfigResponse actual = fs.get("MyApp.test.config", "default", "konfig","env");
+		ConfigResponse actual = fs.get("MyApp.test.config", "default", "konfig", "env");
 		assertTrue(actual.getInfo().get(0).getParams().containsValue("ALL IS WELL"));
 	}
-	
+
 	@Test
 	public void whenInputConfigParamNotFoundInFileThenReturnNull() {
-		ConfigResponse actual = fs.get("MyApp.test.foo", "default", "konfig","env");
+		ConfigResponse actual = fs.get("MyApp.test.foo", "default", "konfig", "env");
 		assertNull(actual);
 	}
-	
+
 	@Test
 	public void whenInputConfigFileItselfNotFoundThenReturnNull() {
-		ConfigResponse actual = fs.get("MyApp.test.foo", "default", "testApp","env");
+		ConfigResponse actual = fs.get("MyApp.test.foo", "default", "testApp", "env");
 		assertNull(actual);
 	}
 

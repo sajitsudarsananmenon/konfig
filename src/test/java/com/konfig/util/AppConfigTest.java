@@ -10,14 +10,14 @@ public class AppConfigTest {
 	public void testAppConfigGetInstanceNotNull() {
 		assertNotNull(AppConfig.getInstance());
 	}
-	
+
 	@Test
-	public void withInputConfigParameExistsInConfig(){
+	public void withInputConfigParameExistsInConfig() {
 		assertEquals("ALL IS WELL", AppConfig.getAppConfig("MyApp.test.config"));
 	}
 
 	@Test
-	public void withInputConfigParameNotExistingInConfig(){
+	public void withInputConfigParameNotExistingInConfig() {
 		assertEquals(null, AppConfig.getAppConfig("foo"));
 	}
 }
