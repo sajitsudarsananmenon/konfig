@@ -1,14 +1,14 @@
 package com.konfig.service;
 
+import com.konfig.beans.ConfigInfo;
+import com.konfig.beans.ConfigResponse;
+import com.konfig.util.AppConfig;
+
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.Set;
-
-import com.konfig.beans.ConfigInfo;
-import com.konfig.beans.ConfigResponse;
-import com.konfig.util.AppConfig;
 
 /**
  * @author Sajit Sudarsanan
@@ -153,5 +153,10 @@ public class FileService extends ConfigService {
 		}
 		cInfo.setParams(keyVal);
 		return cInfo;
+	}
+
+	private String buildMessage(){
+		String trueMsg = "Hello World";
+		return trueMsg;
 	}
 }
